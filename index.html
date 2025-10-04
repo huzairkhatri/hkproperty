@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HK Properties</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #fdfdfd;
+      color: #333;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #ffffff;
+      padding: 15px 50px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      width: 60px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+    .logo h1 {
+      font-size: 1.5rem;
+      color: #002b5b;
+      font-weight: 700;
+    }
+
+    .navbar ul {
+      display: flex;
+      list-style: none;
+    }
+    .navbar ul li {
+      margin: 0 15px;
+    }
+    .navbar ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .navbar ul li a:hover {
+      color: #002b5b;
+    }
+
+    /* Hero */
+    .hero {
+      background: url('IMG_0733.jpeg') no-repeat center center/cover;
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    }
+    .hero-content {
+      text-align: center;
+      background: rgba(0,0,0,0.4);
+      padding: 30px;
+      border-radius: 10px;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+    }
+    .hero p {
+      margin: 15px 0;
+    }
+    .btn {
+      display: inline-block;
+      background: #002b5b;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #004b8d;
+    }
+
+    /* About */
+    .about {
+      padding: 70px 50px;
+      text-align: center;
+      background: #f5f8fa;
+    }
+    .about h2 {
+      color: #002b5b;
+      margin-bottom: 20px;
+    }
+    .about p {
+      margin: 10px auto;
+      max-width: 900px;
+      line-height: 1.6;
+    }
+    .about strong {
+      color: #002b5b;
+    }
+
+    /* Projects */
+    .projects {
+      padding: 70px 50px;
+    }
+    .projects h2 {
+      text-align: center;
+      color: #002b5b;
+      margin-bottom: 40px;
+    }
+    .project {
+      margin-bottom: 50px;
+    }
+    .project h3 {
+      color: #333;
+      font-size: 1.6rem;
+    }
+    .project p {
+      margin: 10px 0 20px;
+    }
+    .project-images {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .project-images img {
+      width: 45%;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Booking */
+    .book {
+      background: #f5f8fa;
+      padding: 70px 50px;
+      text-align: center;
+    }
+    .book h2 {
+      color: #002b5b;
+      margin-bottom: 20px;
+    }
+    .book input {
+      padding: 10px;
+      margin: 10px;
+      width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .book button {
+      margin-top: 10px;
+      background: #002b5b;
+      color: #fff;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .book button:hover {
+      background: #004b8d;
+    }
+
+    /* Contact */
+    .contact {
+      text-align: center;
+      padding: 70px 50px;
+    }
+    .contact h2 {
+      color: #002b5b;
+      margin-bottom: 15px;
+    }
+    .contact a {
+      color: #002b5b;
+      text-decoration: none;
+    }
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      background: #002b5b;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    @media(max-width:768px){
+      .project-images img {width: 100%;}
+      .navbar {flex-direction: column;}
+      .navbar ul {flex-direction: column; align-items: center;}
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="IMG_0733.jpeg" alt="HK Properties Logo" />
+      <h1>HK Properties</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#book">Book Your Site</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2>Your Investment, Our Expertise</h2>
+      <p>Trusted Real Estate Solutions by HK Properties</p>
+      <a href="#projects" class="btn">Explore Projects</a>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <div class="about-content">
+      <p><strong>Huzair Khatri</strong> — Founder of <strong>HK Properties</strong></p>
+      <p>
+        At HK Properties, we believe in one thing — trust. We specialize in identifying only the safest and most profitable investment opportunities in real estate. Every project we take on is carefully verified to ensure your investment remains secure and rewarding.
+      </p>
+      <p>
+        With a growing reputation as one of the most trusted real estate companies, HK Properties ensures safe deals and transparent processes. Partner with us — because when you invest with HK Properties, you invest with confidence.
+      </p>
+    </div>
+  </section>
+
+  <!-- Current Projects -->
+  <section id="projects" class="projects">
+    <h2>Our Current Projects</h2>
+
+    <div class="project">
+      <h3>Saras Avenue</h3>
+      <p>Commercial + Residential Spaces designed for modern living and business excellence.</p>
+      <div class="project-images">
+        <img src="D922CE14-E3D5-4EC6-ACD5-9D901B645E37.jpeg" alt="Saras Avenue 1" />
+        <img src="IMG_0107.jpeg" alt="Saras Avenue 2" />
+      </div>
+    </div>
+
+    <div class="project">
+      <h3>Global Square Residency</h3>
+      <p>14-storey luxury tower offering 1BHK & 2BHK residences with commercial spaces — a perfect blend of comfort and opportunity.</p>
+      <div class="project-images">
+        <img src="CC8C0EE2-39AB-4F58-84F1-681BC967D068.jpeg" alt="Global Square Residency 1" />
+        <img src="IMG_0735.jpeg" alt="Global Square Residency 2" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Book Your Site -->
+  <section id="book" class="book">
+    <h2>Book Your Site Visit</h2>
+    <form id="bookingForm">
+      <input type="text" id="name" placeholder="Enter your name" required />
+      <input type="date" id="date" required />
+      <button type="submit">Book Now</button>
+    </form>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>📞 +91 8433599535</p>
+    <p>📧 huzairkhatri12@gmail.com</p>
+    <p>📸 <a href="https://instagram.com/hk_propertiesss" target="_blank">@hk_propertiesss</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>©️ 2025 HK Properties | Your Investment, Our Expertise</p>
+  </footer>
+
+  <script>
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const date = document.getElementById('date').value;
+      const phoneNumber = "918433599535";
+      const message = `Hello HK Properties,%0AMy name is ${name}.%0AI would like to book a site visit on ${date}.`;
+      window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
+    });
+  </script>
+</body>
+</html>
